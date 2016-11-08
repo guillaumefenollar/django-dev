@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ShortURL service by GuiGui</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+<section id="main">
+    <h1>URL Shortener</h1>
+    <hr />
+{% if added %}<div>Nouvelle entrée créée. L'url est maintenant <a href="{{ fullkey }}">{{ fullkey }}</a></div>{% endif %}
+{% if doesnt_exist %} URL couldn't be found ! {% endif %}
+{% if not added %}
+    <form action="{{ shorturls.views.home }}" method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Generate">
+    </form>
+{% endif %}
+</section>
+<footer>Made by Guillaume Fenollar - <a href="https://github.com/guillaumefenollar">Follow me on GitHub !</a></footer>
+</body>
+</html>

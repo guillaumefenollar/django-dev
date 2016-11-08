@@ -1,0 +1,35 @@
+html {
+    background-color: #edecee;
+    text-align: center;
+}
+
+
+#main {
+    width: 800px;
+    height: 500px;
+    vertical-align: middle;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#main div {
+    border: 1px;
+    padding: 50px;
+}
+
+#main h1 {
+    padding : 25px;
+}
+
+#main hr {
+    width: 40%;
+    margin: auto;
+}
+
+footer {
+    font-size:0.6em;
+}
